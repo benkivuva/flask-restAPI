@@ -1,13 +1,36 @@
 # Basic Flask REST API with SQL-Alchemy Integration
 
-This project demonstrates how to create a simple REST API using Python and Flask, and then integrate it with a Flask SQL-Alchemy database. To get started, clone the repository and set up the necessary dependencies by installing Flask and Flask SQL-Alchemy. Run the application to access a fully functioning REST API at `http://localhost:5000`. The API includes endpoints to handle listing, retrieving, creating, updating, and deleting resources.
+This project demonstrates how to create a simple REST API using Python and Flask, integrated with a Flask SQL-Alchemy database. The API allows for CRUD (Create, Read, Update, Delete) operations on resources.
 
 ## Getting Started
 
-1. Clone the repository and navigate to the project directory.
-2. Set up a virtual environment and activate it.
-3. Install dependencies using `pip install -r requirements.txt`.
-4. Run the application with `python app.py`.
-5. Access the API at `http://localhost:5000`.
+Follow these steps to set up the project locally and run the Flask REST API:
 
-Feel free to modify and extend this project to suit your specific needs.
+```bash
+git clone <repository-url>
+cd <repository-name>
+
+python -m venv venv
+
+# On Windows:
+venv\Scripts\activate
+
+# On macOS and Linux:
+source venv/bin/activate
+
+pip install -r requirements.txt
+
+python main.py
+
+The API will be accessible at [http://localhost:5000](http://localhost:5000).
+
+## API Endpoints
+
+The API provides the following endpoints to interact with the resources:
+
+- `GET /video/<int:video_id>`: Get details of a specific video by its ID.
+- `POST /video/<int:video_id>`: Create a new video with the provided data.
+- `PATCH /video/<int:video_id>`: Update an existing video with the provided data.
+- `DELETE /video/<int:video_id>`: Delete a video by its ID.
+
+Feel free to modify and extend this project to suit your specific requirements.
